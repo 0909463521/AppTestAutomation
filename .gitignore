@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+Android/sdk/emulator
+Android/sdk/tools
+Android/sdk/fonts
+Android/sdk/skins
+Android/sdk/sources
+Android/sdk/system-images
