@@ -2,11 +2,13 @@ package com.bachvu.apptestautomation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,6 +41,23 @@ public class MainActivity extends AppCompatActivity {
                     {
                         mystatus.setText("Wrong username and password");
                     }
+            }
+        });
+
+        @SuppressLint("WrongViewCast")
+        ImageButton img =  findViewById(R.id.imgBachbutton);
+        img.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.d("hellomorning",userName.getText().toString());
+                if(userName.getText().toString().equals("bachvu")  && passWord.getText().toString().equals("bachvu"))
+                {
+                    mystatus.setText("PRODUCTS");
+
+                }
+                else
+                {
+                    mystatus.setText("Wrong username and password");
+                }
             }
         });
     }
